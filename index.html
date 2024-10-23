@@ -28,10 +28,28 @@
 
 	<body>
 		<div class="container py-5">
-			<h1>Biglietto treno</h1>
-			<input id="km-input" type="number" min="0" placeholder="km" />
-			<input id="age-input" type="number" min="0" max="120" placeholder="età" />
-			<button id="submit-button">Invia</button>
+			<h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+			<div class="card p-5 text-bg-primary">
+				<div class="row mb-3">
+					<div class="col-4 form text-center">
+						<label for="floatingPassword" class="h5 mb-3">Nome e cognome</label>
+						<input type="text" class="form-control" id="floatingPassword" />
+					</div>
+					<div class="col-4 form text-center">
+						<label class="h5 mb-3" for="floatingPassword">KM DA PERCORRERE</label>
+						<input type="number" class="form-control" id="km-input" />
+					</div>
+					<div class="col-4 form text-center">
+						<label class="h5 mb-3">FASCIA D'ETA'</label>
+						<select class="form-select" aria-label="Default select example">
+							<option value="1">Maggiorenne</option>
+							<option value="2">Minorenne</option>
+							<option value="3">Over 65</option>
+						</select>
+					</div>
+				</div>
+				<button class="btn btn-light" id="submit-button">Invia</button>
+			</div>
 		</div>
 
 		<!-- ^BOOTSTRAP JS -->
