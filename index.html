@@ -30,19 +30,19 @@
 		<div class="container py-5">
 			<!-- * FORM CARD -->
 			<h1 class="text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-			<div class="card p-5 text-bg-primary">
+			<form class="card p-5 text-bg-primary" id="form">
 				<div class="row mb-3">
 					<div class="col-4 form text-center">
-						<label for="floatingPassword" class="h5 mb-3">Nome e cognome</label>
-						<input type="text" class="form-control" id="floatingPassword" />
+						<label for="name-input" class="h5 mb-3">Nome e cognome</label>
+						<input type="text" class="form-control" id="name-input" required />
 					</div>
 					<div class="col-4 form text-center">
-						<label class="h5 mb-3" for="floatingPassword">Km da percorrere</label>
-						<input type="number" class="form-control" id="km-input" />
+						<label class="h5 mb-3" for="km-input">Km da percorrere</label>
+						<input type="number" class="form-control" id="km-input" required />
 					</div>
 					<div class="col-4 form text-center">
 						<label class="h5 mb-3">Fascia d'età</label>
-						<select class="form-select" aria-label="Default select example">
+						<select class="form-select" id="age-input">
 							<option value="1">Maggiorenne</option>
 							<option value="2">Minorenne</option>
 							<option value="3">Over 65</option>
@@ -50,35 +50,37 @@
 					</div>
 				</div>
 				<div class="text-center">
-					<button class="btn mx-3 col-3 btn-light" id="submit-button">Genera</button>
-					<button class="btn mx-3 col-3 btn-light" id="submit-button">Annulla</button>
+					<button type="submit" class="btn mx-3 col-3 btn-light" id="submit-button">Genera</button>
+					<button type="reset" class="btn mx-3 col-3 btn-light" id="cancel-button">Annulla</button>
 				</div>
-			</div>
+			</form>
 
 			<!-- * TICKET CARD -->
 			<h1 class="text-center mt-5">IL TUO BIGLIETTO</h1>
-			<div class="card p-5 text-bg-primary">
-				<h2>DETTAGLI PASSEGGERI</h2>
-				<div class="row mb-3">
-					<div class="col-4 text-bg-secondary">
-						<h3 class="mb-5">NOME PASSEGGERO</h3>
-						<h4>Jhon Snow</h4>
-					</div>
-					<div class="col-2">
-						<h4 class="mb-5">Offerta</h4>
-						<p>Biglietto Standard</p>
-					</div>
-					<div class="col-2">
-						<h4 class="mb-5">Carrozza</h4>
-						<p>5</p>
-					</div>
-					<div class="col-2">
-						<h4 class="mb-5">Codice CP</h4>
-						<p>92911</p>
-					</div>
-					<div class="col-2">
-						<h4 class="mb-5">Costo Biglietto</h4>
-						<p>2.10€</p>
+			<div class="card text-bg-primary p-5">
+				<div class="text-bg-light p-5">
+					<h2 class="mb-4">Dettagli Passeggero:</h2>
+					<div class="row mb-3">
+						<div class="rounded col-4 text-bg-warning">
+							<h3 class="mb-5">Nome Passeggero</h3>
+							<h4 id="ticket-name">Jhon Snow</h4>
+						</div>
+						<div class="col-2">
+							<h4 class="mb-5">Offerta</h4>
+							<p id="ticket-type">Biglietto Standard</p>
+						</div>
+						<div class="col-2">
+							<h4 class="mb-5">Carrozza</h4>
+							<p>5</p>
+						</div>
+						<div class="col-2">
+							<h4 class="mb-5">Codice CP</h4>
+							<p>92911</p>
+						</div>
+						<div class="col-2">
+							<h4 class="mb-5">Costo Biglietto</h4>
+							<p id="ticket-cost">€2.10</p>
+						</div>
 					</div>
 				</div>
 			</div>
